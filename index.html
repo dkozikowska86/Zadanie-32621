@@ -76,5 +76,47 @@
 
 
 
+
+<!-- 5. Sekcja "Contact":
+- nagłówek będący imieniem i nazwiskiem
+- dane adresowe umieszczone w specjalnym tagu do tego przeznaczonym
+- formularz w którym znajdą się pola: imię, temat i wiadomość.
+Każdy z nich musi być polem wymaganym. Na końcu przycisk "wyślij". -->
+
+<!-- section#contact>h1{Contact}>h2{Paweł Kowalski}+address -->
+
+<section id="contact">
+    <h1>Paweł Kowalski</h1>
+    <address>
+        ul. Domaniewska 44<br>
+        01-353 Sulejówek<br>
+        Mzowieckie<br>
+        Polska
+    </address>
+
+    <br><br>
+    
+    <form method="post" action="/send_form.php" id="contact-form">
+        <fieldset>
+            <legend>Contact form:</legend><br>
+                <!-- imię -->
+                <label for="name">Name: </label><br>
+                <input type="text" value="" required><br><br>
+
+                <!-- temat -->
+                <label for="mesage_topic">Topic: </label><br>
+                <input type="text" value=""required><br><br>
+
+                <!-- wiadomość -->
+                <label for="message">Message content: </label><br>
+                <textarea name="message" id="message" required ></textarea><br><br>
+
+                <!-- pzycisk "Wyślij" -->
+                <input type="submit" value="Send" required>
+        </fieldset>
+    </form>
+</section>
+
+
 </body>
 </html>
